@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "tasks": {
+    "dev": "deno run --watch --unstable -A main.ts",
+    "bench": "deno bench ./bench/main_bench.ts",
+    "test": "deno bench ./test/main_test.ts",
+    // "build": "deno run -A build/build.ts"
+    // "build": "esbuild main.ts"
+
+    "build": "deno compile --allow-all --unstable main.ts"
+
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.178.0/",
+    "oak/":"https://deno.land/x/oak/"
+  },
+}
